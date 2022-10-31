@@ -7,7 +7,18 @@
     <title>eBPF</title>
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="/static/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-3.6.1.js' %}"></script>
+    <script type="text/javascript">
+        if (jQuery) {
+            alert('jquery installed');
+        } else {
+            alert('jquery install failed');
+        }
+
+        $(function() {
+            alert("jquery worked");
+        });
+    </script>
 </head>
 
 <body>
